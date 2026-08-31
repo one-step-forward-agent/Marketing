@@ -11,7 +11,8 @@ REQUIRED = [
 ]
 
 def main() -> int:
-    files = sorted(Path('interviews').glob('*-interview.md'))
+    base_dir = Path(__file__).resolve().parent
+    files = sorted((base_dir / 'interviews').glob('*-interview.md'))
     if len(files) != 30:
         print(f'Expected 30 interview files, found {len(files)}', file=sys.stderr)
         return 1
