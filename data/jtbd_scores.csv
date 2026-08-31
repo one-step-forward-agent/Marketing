@@ -1,4 +1,4 @@
-jtbd,importance,satisfaction,confidence,opportunity,classification,solution_job_fit
-context-restoration,8.9,3.7,0.8,14.100000000000001,underserved,0.4157303370786517
-decision-support,8.9,3.9,0.8039999999999999,13.9,underserved,0.4382022471910112
-time-feedback,8.7,4.3,0.776,13.099999999999998,underserved,0.4942528735632184
+jtbd,importance,satisfaction,confidence,n_fixtures,importance_sd,satisfaction_sd,empirical_sources,opportunity,classification,solution_job_fit,evidence_grade
+context-restoration,8.9,3.7,0.8,10,0.7000000000000001,0.9,0,14.100000000000001,underserved,0.4157303370786517,synthetic-only
+decision-support,8.9,3.9,0.8039999999999999,10,0.7000000000000001,0.9433981132056604,0,13.9,underserved,0.4382022471910112,synthetic-only
+time-feedback,8.7,4.3,0.776,10,0.6403124237432849,0.9,0,13.099999999999998,underserved,0.4942528735632184,synthetic-only

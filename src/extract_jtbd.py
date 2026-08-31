@@ -1,4 +1,8 @@
-"""Normalize synthetic CustDev fixture scores from the CustomerDevelopment Git branch."""
+"""Normalize CustDev fields from the CustomerDevelopment Git branch.
+
+The current branch intentionally consumes the canonical research branch through Git rather
+than copying interview files, preserving branch-to-branch data lineage.
+"""
 from __future__ import annotations
 
 import re
@@ -23,6 +27,13 @@ def _extract(pattern: str, text: str) -> str:
     return match.group(1).strip()
 
 
+def _section(name: str, text: str) -> str:
+    match = re.search(rf"^## {re.escape(name)}\n(.+?)(?=\n## |\Z)", text, flags=re.MULTILINE | re.DOTALL)
+    if not match:
+        raise ValueError(f"Could not parse section: {name}")
+    return match.group(1).strip()
+
+
 def extract_features(output: str | Path = "data/interview_features.csv") -> pd.DataFrame:
     rows: list[dict[str, object]] = []
     for index in range(1, 31):
@@ -34,13 +45,24 @@ def extract_features(output: str | Path = "data/interview_features.csv") -> pd.D
         importance = float(_extract(r"## Importance score\n([0-9.]+)/10", text))
         satisfaction = float(_extract(r"## Satisfaction score\n([0-9.]+)/10", text))
         confidence = float(_extract(r"## Confidence score\n([0-9.]+)", text))
+        evidence_text = _section("Evidence type", text)
+        evidence_type = "synthetic-fixture" if evidence_text.startswith("Synthetic fixture") else "empirical"
         rows.append(
             {
                 "interview_id": interview_id,
+                "segment": _section("Persona / segment", text),
                 "jtbd": jtbd,
+                "context": _section("Context", text),
+                "trigger": _section("Trigger", text),
+                "pain": _section("Pain", text),
+                "workaround": _section("Existing workaround", text),
+                "functional_job": _section("Functional job", text),
+                "emotional_job": _section("Emotional job", text),
+                "social_job": _section("Social job", text),
                 "importance": importance,
                 "satisfaction": satisfaction,
                 "confidence": confidence,
+                "evidence_type": evidence_type,
             }
         )
     frame = pd.DataFrame(rows)

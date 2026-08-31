@@ -1,11 +1,35 @@
-# Candidate USP hypotheses
+# Candidate USP hypotheses v0.2
 
-> These candidates are derived from a synthetic fixture dataset. They are prompts for empirical validation, not scientifically proven USPs.
+> The current scores come from synthetic fixtures. They are a deterministic pipeline check, **not** scientific proof and **not** a valid basis for declaring a winner among the three JTBD.
 
-Based on the deterministic opportunity analysis:
+## The three candidate value propositions
 
-1. **Context restoration — opportunity 14.1.** Candidate proposition: *Automatically reconstruct the relevant context of a task or decision and show the next meaningful step with traceable source history.*
-2. **Decision support — opportunity 13.9.** Candidate proposition: *Turn ambiguous choices into explicit alternatives, criteria, evidence and a reversible recommendation rather than a generic AI answer.*
-3. **Objective time feedback — opportunity 13.1.** Candidate proposition: *Explain where time actually went and compare observed behavior with declared goals, using transparent evidence rather than self-reported productivity.*
+1. **Context restoration — synthetic opportunity 14.1.**  
+   Reconstruct the relevant state of work, show why previous decisions were made, expose open loops, and propose a next step with source lineage.
 
-A combined product hypothesis is that the strongest differentiation may come from a **traceable personal decision-and-context layer** that links actions, time, evidence and decisions. This must be tested with real respondents before it is treated as positioning.
+2. **Decision support — synthetic opportunity 13.9.**  
+   Turn ambiguous choices into explicit alternatives, criteria and evidence, preserving a rationale that can be revisited instead of returning a black-box AI answer.
+
+3. **Objective time feedback — synthetic opportunity 13.1.**  
+   Compare observed time/attention with declared goals through explainable categories and a weekly review rather than a guilt-oriented productivity score.
+
+## Stronger combined differentiation hypothesis
+
+The most defensible product idea is not "three productivity features." It is one **evidence layer for personal work**:
+
+```text
+what happened
+    ↓
+what context matters
+    ↓
+why a decision was made
+    ↓
+where attention went afterward
+    ↓
+what should be reviewed next
+```
+
+This bridge is the USP **hypothesis** to validate against task managers, time trackers, memory products and generic LLM workflows.
+
+## Decision rule
+Do not select the beachhead from 14.1 vs 13.9 vs 13.1. Select it from real segment evidence: recurrence × intensity × workaround cost × behavioral pull × trust feasibility.

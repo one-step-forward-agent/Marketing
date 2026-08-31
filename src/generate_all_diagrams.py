@@ -16,7 +16,8 @@ EXPECTED_FILENAMES = [
 
 
 def _save(fig: plt.Figure, path: Path) -> Path:
-    fig.tight_layout()
+    fig.text(0.5, 0.005, "Synthetic fixtures — descriptive pipeline output, not market evidence", ha="center", fontsize=8)
+    fig.tight_layout(rect=(0, 0.035, 1, 1))
     fig.savefig(path, dpi=150, bbox_inches="tight")
     plt.close(fig)
     return path
@@ -36,7 +37,10 @@ def generate_all_diagrams(source: str | Path = "data/jtbd_scores.csv", output_di
     outputs.append(_save(fig, out / "jtbd-prioritization.png"))
 
     fig, ax = plt.subplots(figsize=(8, 6))
-    ax.scatter(frame["importance"], frame["satisfaction"], s=90)
+    if {"importance_sd", "satisfaction_sd"} <= set(frame.columns):
+        ax.errorbar(frame["importance"], frame["satisfaction"], xerr=frame["importance_sd"], yerr=frame["satisfaction_sd"], fmt="o", capsize=4)
+    else:
+        ax.scatter(frame["importance"], frame["satisfaction"], s=90)
     for row in frame.itertuples():
         ax.annotate(row.jtbd, (row.importance, row.satisfaction), xytext=(6, 6), textcoords="offset points")
     ax.set_title("Importance vs satisfaction")
