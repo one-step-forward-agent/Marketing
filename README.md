@@ -1,13 +1,15 @@
-# Marketing
+# JobesToBeDone
 
-Product discovery and research repository for **one-step-forward-agent**.
+Reproducible JTBD opportunity analysis derived from the synthetic `CustomerDevelopment` branch.
 
-## Branches
+> The spelling `JobesToBeDone` is retained intentionally. All outputs are analytical fixtures and candidate value propositions, not scientifically validated USPs.
 
-- `CustomerDevelopment` — structured CustDev research fixtures and normalized JTBD observations.
-- `JobesToBeDone` — reproducible JTBD opportunity analysis and candidate USP visualizations. The spelling is intentionally preserved from the project specification.
-- `Hypotheses` — prioritized Product Backlog, HLA v0.1, data flows, and ADRs.
+## Run
 
-## Research integrity
+```bash
+python -m src.extract_jtbd
+python -m src.generate_all_diagrams
+python -m pytest tests -q
+```
 
-The initial interview corpus is synthetic test data created to validate the research and analytics pipeline. It is **not empirical customer evidence** and must not be represented as transcripts from real respondents. Replace synthetic fixtures with real interview data before making empirical product claims.
+Generated charts are committed under `Diagrams/`.
