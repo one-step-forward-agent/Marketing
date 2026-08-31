@@ -1,13 +1,13 @@
-# Marketing
+# Customer Development — synthetic pilot fixtures
 
-Product discovery and research repository for **one-step-forward-agent**.
+This branch contains a **synthetic** 30-interview corpus used to exercise the Customer Development → JTBD → hypothesis pipeline.
 
-## Branches
+> Research integrity: every interview is generated test data, not a transcript from a real respondent. The corpus can validate tooling and analytical methods, but cannot validate market demand or a USP.
 
-- `CustomerDevelopment` — structured CustDev research fixtures and normalized JTBD observations.
-- `JobesToBeDone` — reproducible JTBD opportunity analysis and candidate USP visualizations. The spelling is intentionally preserved from the project specification.
-- `Hypotheses` — prioritized Product Backlog, HLA v0.1, data flows, and ADRs.
+## Recurring JTBD
 
-## Research integrity
+1. `context-restoration` — restore lost context across tasks, decisions, information, and unfinished work.
+2. `decision-support` — reduce decision paralysis using structured evidence and objective criteria.
+3. `time-feedback` — obtain objective feedback about actual time usage versus intended goals and priorities.
 
-The initial interview corpus is synthetic test data created to validate the research and analytics pipeline. It is **not empirical customer evidence** and must not be represented as transcripts from real respondents. Replace synthetic fixtures with real interview data before making empirical product claims.
+Scores use bounded scales: importance 1–10, satisfaction 1–10, confidence 0.0–1.0.
