@@ -34,3 +34,19 @@ def test_aggregate_preserves_three_canonical_jtbd_labels(tmp_path: Path):
     result = aggregate_jtbd_scores(source)
     assert set(result["jtbd"]) == EXPECTED_JTBD
     assert list(result.sort_values(["opportunity", "jtbd"], ascending=[False, True])["opportunity"]) == sorted(result["opportunity"], reverse=True)
+
+
+def test_generate_all_diagrams_creates_six_nonempty_pngs(tmp_path: Path):
+    from src.generate_all_diagrams import generate_all_diagrams
+
+    outputs = generate_all_diagrams("data/jtbd_scores.csv", tmp_path)
+    expected = {
+        "jtbd-prioritization.png",
+        "importance-vs-satisfaction.png",
+        "underserved-jobs.png",
+        "overserved-jobs.png",
+        "opportunity-map.png",
+        "solution-job-fit.png",
+    }
+    assert {path.name for path in outputs} == expected
+    assert all(path.exists() and path.stat().st_size > 1000 for path in outputs)
