@@ -103,6 +103,21 @@ Pre-PMF GTM делится на три фазы: заменить synthetic evid
 ### `experiments/marketing-experiments.md`
 Каждый marketing experiment содержит hypothesis, test, primary metric и kill/revise criterion. Success criteria задаются **до** просмотра результатов.
 
+### `strategy/icp-scorecard.md`
+Фиксирует beachhead-segment hypotheses и evidence gates, чтобы не превращать «knowledge workers» в слишком широкий ICP.
+
+### `strategy/channel-strategy.md`
+Определяет каналы как механизм получения qualified evidence/activation, а не как гонку за vanity traffic.
+
+### `strategy/pricing-hypotheses.md`
+Разделяет price guesses, stated willingness, commitment, actual transaction и retained payment; pricing остаётся hypothesis до paid evidence.
+
+### `strategy/launch-readiness.md`
+Задаёт gates от research integrity до problem evidence, concierge value, activation, retention, paid pilot и broader launch.
+
+### `content/editorial-backlog.md` и `experiments/experiment-template.md`
+Дают executable backlog контента и единый preregistered шаблон экспериментов.
+
 ## Использованные специальные Marketing Skills
 
 Подход построен на принципах специализированных Agent Skills:
