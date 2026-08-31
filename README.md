@@ -1,13 +1,16 @@
-# Customer Development — synthetic pilot fixtures
+# CustomerDevelopment branch
 
-This branch contains a **synthetic** 30-interview corpus used to exercise the Customer Development → JTBD → hypothesis pipeline.
+This branch contains 30 **synthetic** CustDev fixtures used to validate the research pipeline. It now follows stricter research-quality rules inspired by customer-research and interview-to-JTBD workflows.
 
-> Research integrity: every interview is generated test data, not a transcript from a real respondent. The corpus can validate tooling and analytical methods, but cannot validate market demand or a USP.
+## Contents
+- `interviews/` — 30 structured fixtures with functional/emotional/social jobs, switching forces, alternatives, evidence type and interpretation risk.
+- `analysis/evidence-matrix.csv` — normalized traceability table.
+- `analysis/segment-analysis.md` — fixture coverage and why it cannot estimate market prevalence.
+- `analysis/research-quality.md` — confidence/evidence policy.
+- `analysis/research-gaps.md` — highest-risk unknowns to replace with empirical evidence.
+- `analysis/next-interview-guide.md` — episode-based guide for the next real CustDev round.
+- `analysis/language-hypotheses.md` — synthetic wording to test, explicitly not VOC proof.
+- `validate_interviews.py` — schema/integrity validator.
 
-## Recurring JTBD
-
-1. `context-restoration` — restore lost context across tasks, decisions, information, and unfinished work.
-2. `decision-support` — reduce decision paralysis using structured evidence and objective criteria.
-3. `time-feedback` — obtain objective feedback about actual time usage versus intended goals and priorities.
-
-Scores use bounded scales: importance 1–10, satisfaction 1–10, confidence 0.0–1.0.
+## Integrity rule
+No synthetic sentence in this branch may be published as a customer quote, testimonial, prevalence claim, or evidence of product-market fit.

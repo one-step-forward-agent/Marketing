@@ -45,3 +45,27 @@ Primary: `decision-support` — Make a decision with evidence.
 
 ## Research notes
 Fixture 017 intentionally varies persona, trigger, workaround and score profile while preserving the recurring JTBD signal.
+
+## Functional job
+Зафиксировать варианты и ограничения, сравнить их по явным критериям и принять решение с проверяемым обоснованием.
+
+## Emotional job
+Уменьшить сомнение и усталость от бесконечного анализа, не теряя ощущение контроля над выбором.
+
+## Social job
+Быть способным объяснить решение команде или стейкхолдерам через критерии и evidence, а не через «кажется».
+
+## Switching forces
+- **Push:** Аргументы за и против остаются в голове и сложно сравниваются.
+- **Pull:** Прозрачная criterion/evidence matrix, reversible recommendation и сохранённая rationale history.
+- **Habit:** Пользователь уже опирается на текущий workaround: совет коллеги.
+- **Anxiety:** Опасение делегировать выбор AI, получить псевдообъективный ответ или скрытую галлюцинацию.
+
+## Alternative considered
+таблица плюсов/минусов, совет коллеги, generic LLM, интернет-поиск, откладывание решения.
+
+## Evidence type
+Synthetic fixture — generated for pipeline/schema validation. No statement in this file is a real respondent quote or empirical market observation.
+
+## Interpretation risk
+Этот сценарий специально сконструирован вокруг заранее заданного JTBD. Его нельзя использовать для оценки prevalence, сегментных различий, willingness-to-pay, causal impact или product-market fit.
