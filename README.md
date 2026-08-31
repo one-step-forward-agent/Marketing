@@ -1,13 +1,13 @@
-# Marketing
+# Hypotheses
 
-Product discovery and research repository for **one-step-forward-agent**.
+This branch converts the three recurring JTBD signals into a deterministic, experiment-oriented Product Backlog and HLA v0.1.
 
-## Branches
+## Prioritization
 
-- `CustomerDevelopment` — structured CustDev research fixtures and normalized JTBD observations.
-- `JobesToBeDone` — reproducible JTBD opportunity analysis and candidate USP visualizations. The spelling is intentionally preserved from the project specification.
-- `Hypotheses` — prioritized Product Backlog, HLA v0.1, data flows, and ADRs.
+```text
+Priority = (Expected Impact × Confidence) / Implementation Complexity
+```
 
-## Research integrity
+Impact and complexity use 1–10 bounded scales. Confidence uses 0.10–1.00. The 24 hypotheses contain measurable success metrics and explicit kill criteria.
 
-The initial interview corpus is synthetic test data created to validate the research and analytics pipeline. It is **not empirical customer evidence** and must not be represented as transcripts from real respondents. Replace synthetic fixtures with real interview data before making empirical product claims.
+> The initial evidence is synthetic. The backlog is a discovery plan, not proof of product-market fit.
